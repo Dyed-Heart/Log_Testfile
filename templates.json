@@ -1,0 +1,610 @@
+[
+  {
+    "system": "BGL",
+    "content": "1 ddr errors(s) detected and corrected on rank 0, symbol 25, bit 1",
+    "event_id": "E94",
+    "event_template": "<*> ddr errors(s) detected and corrected on rank <*>, symbol <*> bit <*>",
+    "revised_template": "<*> ddr errors(s) detected and corrected on rank <*>, symbol <*>, bit <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "d-cache flush parity error........1",
+    "event_id": "E255",
+    "event_template": "d-cache flush parity error….....<*>",
+    "revised_template": "d-cache flush parity error........<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "d-cache flush parity error........0",
+    "event_id": "E255",
+    "event_template": "d-cache flush parity error….....<*>",
+    "revised_template": "d-cache flush parity error........<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "ciod: failed to read message prefix on control stream (CioStream socket to 172.16.96.116:51706",
+    "event_id": "E104",
+    "event_template": "ciod: for node <*>, read continuation request but ioState is <*>",
+    "revised_template": "ciod: for node <*>, read continuation request but ioState is <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "round toward zero........................0",
+    "event_id": "E222",
+    "event_template": "round toward zero...................<*>",
+    "revised_template": "round toward zero........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "correctable error detected in EDRAM bank 0.....0",
+    "event_id": "E216",
+    "event_template": "correctable error detected in EDRAM bank <*>",
+    "revised_template": "correctable error detected in EDRAM bank <*>.....<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "BglIdoChip table has 2 IDOs with the same IP address (10.0.0.237)",
+    "event_id": "E133",
+    "event_template": "BglIdoChip table has <*> IDOs with the same IP address <*>",
+    "revised_template": "BglIdoChip table has <*> IDOs with the same IP address (<*>)",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "BGL",
+    "content": "MidplaneSwitchController::parityAlignment() pap failed: R22-M0-L0-U22-D, status=00000000 00000000",
+    "event_id": "E57",
+    "event_template": "MidplaneSwitchController::parityAlignment() pap failed: <*> status=<*>",
+    "revised_template": "MidplaneSwitchController::parityAlignment() pap failed: <*>, status=<*> <*>",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "BGL",
+    "content": "MidplaneSwitchController::parityAlignment() pap failed: R56-M1-L3-U22-C, status=ffffffff ffffff80",
+    "event_id": "E57",
+    "event_template": "MidplaneSwitchController::parityAlignment() pap failed: <*> status=<*>",
+    "revised_template": "MidplaneSwitchController::parityAlignment() pap failed: <*>, status=<*> <*>",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "BGL",
+    "content": "MidplaneSwitchController::parityAlignment() pap failed: R77-M0-L1-U19-C, status=ff7ffffc 0fffff00",
+    "event_id": "E57",
+    "event_template": "MidplaneSwitchController::parityAlignment() pap failed: <*> status=<*>",
+    "revised_template": "MidplaneSwitchController::parityAlignment() pap failed: <*>, status=<*> <*>",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "BGL",
+    "content": "MidplaneSwitchController::parityAlignment() pap failed: R61-M0-L3-U21-C, status=ffffffff ffffff80",
+    "event_id": "E57",
+    "event_template": "MidplaneSwitchController::parityAlignment() pap failed: <*> status=<*>",
+    "revised_template": "MidplaneSwitchController::parityAlignment() pap failed: <*>, status=<*> <*>",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "BGL",
+    "content": "Node card VPD check: missing U01 node, VPD ecid 04C881D4DE2FFFFF020C1C6052EB in processor card slot J18",
+    "event_id": "E85",
+    "event_template": "Node card VPD check: missing <*>, VPD ecid <*> in processor card slot <*>",
+    "revised_template": "Node card VPD check: missing <*> node, VPD ecid <*> in processor card slot <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Node card VPD check: missing U01 node, VPD ecid 04D684670F2FFFFF08061B7088DE in processor card slot J19",
+    "event_id": "E85",
+    "event_template": "Node card VPD check: missing <*>, VPD ecid <*> in processor card slot <*>",
+    "revised_template": "Node card VPD check: missing <*> node, VPD ecid <*> in processor card slot <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Node card VPD check: missing U11 node, VPD ecid 04C784664E2FFFFF07041C004EE8 in processor card slot J19",
+    "event_id": "E85",
+    "event_template": "Node card VPD check: missing <*>, VPD ecid <*> in processor card slot <*>",
+    "revised_template": "Node card VPD check: missing <*> node, VPD ecid <*> in processor card slot <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Node card VPD check: missing U01 node, VPD ecid 04C08465452FFFFF0C0A1B1084D1 in processor card slot J19",
+    "event_id": "E85",
+    "event_template": "Node card VPD check: missing <*>, VPD ecid <*> in processor card slot <*>",
+    "revised_template": "Node card VPD check: missing <*> node, VPD ecid <*> in processor card slot <*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Missing reverse cable: Cable R23-M1-L1 1 F (J04) --> R43-M0-L1 1 C (J06) is present BUT the reverse cable R43-M0-L1 4 F (J12) --> R23-M1-L1 4 C (J14) is missing",
+    "event_id": "E52",
+    "event_template": "Missing reverse cable: Cable <*> is present BUT the reverse cable <*> is missing",
+    "revised_template": "Missing reverse cable: Cable <*> --> <*> is present BUT the reverse cable <*> --> <*> is missing",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Missing reverse cable: Cable R02-M0-L3 0 F (J03) --> R06-M0-L3 0 C (J02) is present BUT the reverse cable R06-M0-L3 5 F (J17) --> R02-M0-L3 5 C (J16) is missing",
+    "event_id": "E52",
+    "event_template": "Missing reverse cable: Cable <*> is present BUT the reverse cable <*> is missing",
+    "revised_template": "Missing reverse cable: Cable <*> --> <*> is present BUT the reverse cable <*> --> <*> is missing",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "Missing reverse cable: Cable R02-M0-L3 3 F (J11) --> R03-M0-L3 3 C (J10) is present BUT the reverse cable R03-M0-L3 2 F (J09) --> R02-M0-L3 2 C (J08) is missing",
+    "event_id": "E52",
+    "event_template": "Missing reverse cable: Cable <*> is present BUT the reverse cable <*> is missing",
+    "revised_template": "Missing reverse cable: Cable <*> --> <*> is present BUT the reverse cable <*> --> <*> is missing",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "invalid (SNAN)...........................0",
+    "event_id": "E229",
+    "event_template": "invalid (<*>)........................<*>",
+    "revised_template": "invalid (<*>)...........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "invalid (SNAN)...........................1",
+    "event_id": "E229",
+    "event_template": "invalid (<*>)........................<*>",
+    "revised_template": "invalid (<*>)...........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "invalid (Inf-Inf)........................0",
+    "event_id": "E229",
+    "event_template": "invalid (<*>)........................<*>",
+    "revised_template": "invalid (<*>)...........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "invalid (Inf/Inf)........................0",
+    "event_id": "E229",
+    "event_template": "invalid (<*>)........................<*>",
+    "revised_template": "invalid (<*>)...........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "BGL",
+    "content": "invalid (compare)........................0",
+    "event_id": "E229",
+    "event_template": "invalid (<*>)........................<*>",
+    "revised_template": "invalid (<*>)...........................<*>",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "OpenStack",
+    "content": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.",
+    "event_id": "E19",
+    "event_template": "Successfully synced instances from host '<*>'.",
+    "revised_template": "Successfully synced instances from host '<*>'",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "OpenStack",
+    "content": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.",
+    "event_id": "E7",
+    "event_template": "The instance sync for host <*> did not match. Re-created its InstanceList.",
+    "revised_template": "The instance sync for host '<*>' did not match. Re-created its InstanceList.",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "Checking 'hlt' instruction... OK.",
+    "event_id": "E146",
+    "event_template": "Checking <*> instruction... OK.",
+    "revised_template": "Checking '<*>' instruction... OK.",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "creating device node '/udev/lp0'",
+    "event_id": "E258",
+    "event_template": "creating device node <*>",
+    "revised_template": "creating device node '<*>'",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "listening on IPv4 interface eth0, 63.126.79.67#53",
+    "event_id": "E167",
+    "event_template": "listening on IPv4 interface <*>, <*>",
+    "revised_template": "listening on IPv4 interface <*>, <*>#<*>",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "configure: keyword \"authenticate\" unknown, line ignored",
+    "event_id": "E60",
+    "event_template": "configure: keyword <*> unknown, line ignored",
+    "revised_template": "configure: keyword \"<*>\" unknown, line ignored",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "couldn't add command channel 127.0.0.1#953: not found",
+    "event_id": "E95",
+    "event_template": "couldn't add command channel <*> not found",
+    "revised_template": "couldn't add command channel <*>#<*>: not found",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "removing device node '/udev/vcs2'",
+    "event_id": "E253",
+    "event_template": "removing device node <*>",
+    "revised_template": "removing device node '<*>'",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "FAILED LOGIN 1 FROM (null) FOR , Authentication failure",
+    "event_id": "E40",
+    "event_template": "FAILED LOGIN <*> FROM (<*>) FOR , Authentication failure",
+    "revised_template": "FAILED LOGIN <*> FROM <*> FOR , Authentication failure",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "configure: keyword \"authenticate\" unknown, line ignored",
+    "event_id": "E60",
+    "event_template": "configure: keyword <*> unknown, line ignored",
+    "revised_template": "configure: keyword \"<*>\" unknown, line ignored",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Linux",
+    "content": "Stopping MySQL: succeeded",
+    "event_id": "E192",
+    "event_template": "Stopping MySQL: succeeded",
+    "revised_template": "Stopping MySQL: <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "Stopping MySQL: failed",
+    "event_id": "E222",
+    "event_template": "Stopping MySQL: failed",
+    "revised_template": "Stopping MySQL: <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "cupsd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "sendmail shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "sm-client shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "atd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "privoxy shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "xfs shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "jserver shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "gpm shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "httpd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "spamd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "smartd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "named shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "snmpd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "xinetd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "crond shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "apmd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "ntpd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "rpc.statd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "portmap shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "klogd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "sm-client shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "sendmail shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "messagebus shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "xfs shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "jserver shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "named shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "rpc.statd shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "portmap shutdown failed",
+    "event_id": "E293",
+    "event_template": "<*> shutdown failed",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "syslogd shutdown succeeded",
+    "event_id": "E264",
+    "event_template": "<*> shutdown succeeded",
+    "revised_template": "<*> shutdown <*>",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)",
+    "event_id": "E244",
+    "event_template": "BIOS-e820: <*> - <*> (usable)",
+    "revised_template": "BIOS-e820: <*> - <*> (<*>)",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)",
+    "event_id": "E219",
+    "event_template": "BIOS-e820: <*> - <*> (reserved)",
+    "revised_template": "BIOS-e820: <*> - <*> (<*>)",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)",
+    "event_id": "E244",
+    "event_template": "BIOS-e820: <*> - <*> (usable)",
+    "revised_template": "BIOS-e820: <*> - <*> (<*>)",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "BIOS-e820: 0000000007eae000 - 0000000008000000 (reserved)",
+    "event_id": "E219",
+    "event_template": "BIOS-e820: <*> - <*> (reserved)",
+    "revised_template": "BIOS-e820: <*> - <*> (<*>)",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)",
+    "event_id": "E219",
+    "event_template": "BIOS-e820: <*> - <*> (reserved)",
+    "revised_template": "BIOS-e820: <*> - <*> (<*>)",
+    "guideline": "nan"
+  },
+  {
+    "system": "Linux",
+    "content": "loading configuration from '/etc/named.conf'",
+    "event_id": "E186",
+    "event_template": "loading configuration from <*>",
+    "revised_template": "loading configuration from '<*>'",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Apache",
+    "content": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)",
+    "event_id": "E10",
+    "event_template": "env.createBean2(): Factory error creating <*> (<*>, <*>)",
+    "revised_template": "env.createBean2(): Factory error creating <*> ( <*>, <*>)",
+    "guideline": "Label Error"
+  },
+  {
+    "system": "Apache",
+    "content": "[client 219.239.227.58] mod_security: Access denied with code 403. Error reading POST data, error_code=104 [hostname \"63.126.79.67\"] [uri \"/xmlrpc.php\"]",
+    "event_id": "E1",
+    "event_template": "[client <*>] mod_security: Access denied with code <*>. Error reading POST data, error_code=<*> [hostname <*>] [uri <*>]",
+    "revised_template": "[client <*>] mod_security: Access denied with code <*>. Error reading POST data, error_code=<*> [hostname \"<*>\"] [uri \"<*>\"]",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Proxifier",
+    "content": "proxy.cse.cuhk.edu.hk:5070 close, 1228 bytes (1.19 KB) sent, 0 bytes received, lifetime <1 sec",
+    "event_id": "E7",
+    "event_template": "<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>",
+    "revised_template": "<*> close, <*> bytes (<*> KB) sent, <*> bytes received, lifetime <*> sec",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Proxifier",
+    "content": "proxy.cse.cuhk.edu.hk:5070 close, 1036 bytes (1.01 KB) sent, 34151 bytes (33.3 KB) received, lifetime <1 sec",
+    "event_id": "E6",
+    "event_template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>",
+    "revised_template": "<*> close, <*> bytes (<*> KB) sent, <*> bytes (<*> KB) received, lifetime <*> sec",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Proxifier",
+    "content": "proxy.cse.cuhk.edu.hk:5070 close, 451 bytes sent, 18846 bytes (18.4 KB) received, lifetime <1 sec",
+    "event_id": "E8",
+    "event_template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>",
+    "revised_template": "proxy.cse.cuhk.edu.hk:<*> close, <*> bytes sent, <*> bytes (<*> KB) received, lifetime <*> sec",
+    "guideline": "Inconstant label"
+  },
+  {
+    "system": "Proxifier",
+    "content": "213.199.179.159:443 close, 9630 bytes (9.40 KB) sent, 32189 bytes (31.4 KB) received, lifetime 01:01",
+    "event_id": "E6",
+    "event_template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>",
+    "revised_template": "<*> close, <*> bytes (<*> KB) sent, <*> bytes (<*> KB) received, lifetime <*>",
+    "guideline": "Inconstant label"
+  }
+]

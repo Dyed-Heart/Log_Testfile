@@ -1,0 +1,50 @@
+﻿EventId,OriginalTemplate,Occurrences,ReviewedTemplate
+E10,PacketResponder <*> for block <*> terminating,311,"优化模板：PacketResponder <*> for block <*> terminating
+
+修改标签：无错误
+
+该模板已经符合优化要求，无需进一步修改。"
+E6,BLOCK* NameSystem.addStoredBlock: blockMap updated: <*>:<*> is added to <*> size <*>,314,"优化模板：BLOCK* NameSystem.addStoredBlock: blockMap updated: <*>, <*>, is added to <*>, size <*>
+
+修改标签：Label Error"
+E11,Received block <*> of size <*> from <*>,292,"优化模板：Received block <*> of size <*> from <*>
+
+修改标签：Label Error
+
+优化建议：模板中的占位符已正确识别，无需修改。"
+E13,Receiving block <*> src: <*>:<*> dest: <*>:<*>,292,"优化模板：Receiving block <*> src: <*>:<*> dest: <*>:<*>
+修改标签：nan
+
+根据样例的风格，原始模板已经足够清晰且没有明显的错误，因此不需要进行修改。"
+E7,BLOCK* NameSystem.allocateBlock: <*> <*>,115,"优化模板：BLOCK* NameSystem.allocateBlock: <*>, <*>
+
+修改标签：Label Error"
+E14,Verification succeeded for <*>,20,"优化模板：Verification succeeded for <*>
+
+修改标签：nan
+
+建议：该模板已经相对简洁且清晰，没有明显的变量识别错误或分组层面错误，因此不需要进一步优化。"
+E9,Deleting block <*> file <*>,263,"优化模板：Deleting block <*> file '<*>'
+
+修改标签：Label Error"
+E1,<*>:<*> Served block <*> to <*>,80,"优化模板：<*>:<*> Served block <*> to <*>
+修改标签：nan
+
+建议：该模板已经符合样例的风格，没有明显的错误或需要优化的地方。"
+E3,<*>:<*>:Got exception while serving <*> to <*>:,80,"优化模板：<*>:<*>:Got exception while serving <*> to <*>
+
+修改标签：Label Error"
+E8,BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>:<*>,224,"优化模板：BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>: <*>
+
+修改标签：Label Error"
+E2,<*>:<*> Starting thread to transfer block <*> to <*>:<*>,1,"优化模板：<*>:<*> Starting thread to transfer block <*> to <*> <*>
+修改标签：Label Error"
+E4,BLOCK* ask <*>:<*> to delete <*>,5,"优化模板：BLOCK* ask <*>: <*> to delete <*>
+
+修改标签：Label Error"
+E12,Received block <*> src: <*>:<*> dest: <*>:<*> of size <*>,2,"优化模板：Received block <*> src: <*>:<*> dest: <*>:<*> of size <*>
+
+修改标签：Label Error"
+E5,BLOCK* ask <*>:<*> to replicate <*> to datanode(s) <*>:<*>,1,"优化模板：BLOCK* ask <*>:<*> to replicate <*> to datanode(s) <*>
+
+修改标签：Label Error"
