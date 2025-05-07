@@ -17,16 +17,16 @@ def load_labeled_templates(json_path):
         data = json.load(f)
 
     prompt_lines = [
-        "你是一个日志模板优化助手，请根据以下样例学习模板审查与修改规律。其中，下面这个占位符代表模板中的参数：<*>。你需要判断：（1）分组层面错误：在同一个模板中挑选两个最不相似的模板，来确定这个组是否应该被分为多个模板，或者认为某几个模板是否应该合并；（2）变量识别错误：一个模板里面所有对应的占位符是否真的是变量，是否有其他变量并未被识别。输出要求：", ""
+        "You are a log template optimization assistant. Please learn the rules of template review and modification according to the following sample. Among them, the following placeholder represents the parameter in the template: <*>. You need to: (1) According to the sample log, check if there are any symbol errors in the template and correct them; (2) Determine if there are any variable recognition errors: Whether all the corresponding placeholders in a template are truly variables and whether there are any other variables that have not been recognized. Note: The log template needs to be consistent with the original log. There is no need to increase readability, add punctuation, or conform to human grammar, etc.", ""
     ]
 
     for entry in data:
         block = [
-            f"系统：{entry.get('system', '')}",
-            f"原始日志：{entry.get('content', '')}",
-            f"原始模板：{entry.get('event_template', '')}",
-            f"优化模板：{entry.get('revised_template', '')}",
-            f"修改标签：{entry.get('guideline', '')}",
+            f"System: {entry.get('system', '')}",
+            f"Original_log: {entry.get('content', '')}",
+            f"Event_template: {entry.get('event_template', '')}",
+            f"Revised_template: {entry.get('revised_template', '')}",
+            f"Guideline: {entry.get('guideline', '')}",
             ""
         ]
         prompt_lines.extend(block)
@@ -34,13 +34,14 @@ def load_labeled_templates(json_path):
     return "\n".join(prompt_lines)
 
 # 调用 GPT 对模板进行审查/优化
-def review_template(system_prompt, event_id, template, occurrences):
+def review_template(system_prompt, event_id, template, occurrences, example_log):
     user_prompt = (
-        f"请审查并优化以下模板：\n"
+        f"Please review and optimize the following template, all logs from BGL: \n"
         f"EventId: {event_id}\n"
-        f"出现次数: {occurrences}\n"
-        f"模板：{template}\n"
-        f"请根据之前样例的风格，给出优化建议或直接返回优化模板。"
+        f"Occurrences: {occurrences}\n"
+        f"Template: {template}\n"
+        f"Example: {example_log}\n"
+        f"Please provide optimization suggestions based on the style of the previous samples and return the optimization template."
     )
 
     messages = [
@@ -70,14 +71,15 @@ def process_template_file(csv_path, json_path, output_path):
         event_id = row['EventId']
         template = row['EventTemplate']
         occurrences = row['Occurrences']
+        example_log = row['ExampleLog']
 
         print(f"审查模板 EventId={event_id} ...")
 
-        reviewed_template = review_template(system_prompt, event_id, template, occurrences)
+        reviewed_template = review_template(system_prompt, event_id, template, occurrences, example_log)
         reviewed.append({
             "EventId": event_id,
-            "OriginalTemplate": template,
             "Occurrences": occurrences,
+            "OriginalTemplate": template,
             "ReviewedTemplate": reviewed_template
         })
 
@@ -91,7 +93,7 @@ def process_template_file(csv_path, json_path, output_path):
 
 if __name__ == "__main__":
     # 输入路径
-    csv_path = "HDFS_2k.log_templates.csv" # 用户提供的初始模板
+    csv_path = "BGL_2k.log_templates_with_log.csv" # 用户提供的初始模板
     json_path = "templates.json"           # 你的人工标注模板
     output_path = "reviewed_templates.csv" # 输出审查结果
 
