@@ -4,7 +4,7 @@ import openai
 import time
 from openai import OpenAI
 
-api_key = ""
+api_key = "sk-1ihU4FLfC7zcWZSNq70HGFpJ3iq5t5yMuNQE2lEJVtWGCak3"
 host_url = "https://api.chatanywhere.tech/v1"
 client = OpenAI(
     api_key=api_key,
@@ -50,6 +50,12 @@ def xlsx_to_prompt_by_system(xlsx_path, system_name):
     missing = [col for col in required_columns if col not in df.columns]
     if missing:
         raise ValueError(f"缺少必要字段：{missing}")
+    
+    # 去除 Content 和 EventTemplate 为空或全空格的行
+    df = df[
+            df['Content'].astype(str).str.strip().ne("") &
+            df['EventTemplate'].astype(str).str.strip().ne("")
+        ].dropna(subset=['Content', 'EventTemplate'])
 
     # 筛选指定 System
     filtered = df[df['System'] == system_name].dropna(subset=['Content', 'EventTemplate'])
