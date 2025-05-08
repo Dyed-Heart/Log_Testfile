@@ -11,7 +11,7 @@ client = OpenAI(
     base_url=host_url,
     )
 
-# 读取标注模板 json → system prompt
+# 读取标注模板 json → system prompt （已弃置）
 def load_labeled_templates(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -33,10 +33,58 @@ def load_labeled_templates(json_path):
 
     return "\n".join(prompt_lines)
 
+
+# 读取标注模板 xlsx → system prompt
+def xlsx_to_prompt_by_system(xlsx_path, system_name):
+    """
+    从 Excel 中提取指定系统的标注数据，格式化为可用于 GPT prompt 的文本。
+
+    :param xlsx_path: Excel 文件路径
+    :param system_name: 要筛选的 system 名称
+    :return: prompt 字符串
+    """
+    df = pd.read_excel(xlsx_path, engine='openpyxl')
+
+    # 校验字段
+    required_columns = ['System', 'Content','EventId', 'EventTemplate', 'Revised', 'Guideline']
+    missing = [col for col in required_columns if col not in df.columns]
+    if missing:
+        raise ValueError(f"缺少必要字段：{missing}")
+
+    # 筛选指定 System
+    filtered = df[df['System'] == system_name].dropna(subset=['Content', 'EventTemplate'])
+
+    if filtered.empty:
+        return f"未找到 system = {system_name} 的模板数据。"
+
+    # 构造 prompt
+    prompt_lines = [
+        "You are a log template optimization assistant. Please learn the rules of template review and modification according to the following sample. Among them, the following placeholder represents the parameter in the template: <*>. You need to: (1) According to the sample log, check if there are any symbol errors in the template and correct them; (2) Determine if there are any variable recognition errors: Whether all the corresponding placeholders in a template are truly variables and whether there are any other variables that have not been recognized. Note: The log template needs to be consistent with the original log. There is no need to increase readability, add punctuation, or conform to human grammar, etc.", ""
+    ]
+
+    for _, row in filtered.iterrows():
+        eventid = str(row['EventId']).strip()
+        content = str(row['Content']).strip()
+        event_template = str(row['EventTemplate']).strip()
+        revised_template = str(row['Revised']).strip()
+        guideline = str(row['Guideline']).strip()
+        
+        prompt_lines.append(f"""
+            EventId: {eventid}
+            Original_log: {content}
+            Event_template: {event_template}
+            Revised_template: {revised_template}
+            Guideline: {guideline}
+        """)
+
+    return "\n".join(prompt_lines)
+
+
+
 # 调用 GPT 对模板进行审查/优化
 def review_template(system_prompt, event_id, template, occurrences, example_log):
     user_prompt = (
-        f"Please review and optimize the following template, all logs from BGL: \n"
+        f"Please review and optimize the following template: \n"
         f"EventId: {event_id}\n"
         f"Occurrences: {occurrences}\n"
         f"Template: {template}\n"
@@ -61,9 +109,10 @@ def review_template(system_prompt, event_id, template, occurrences, example_log)
         return "ERROR"
 
 # 主函数：读取 csv、逐条审查、写入新文件
-def process_template_file(csv_path, json_path, output_path):
+def process_template_file(system_name, csv_path, xlsx_path, output_path):
     df = pd.read_csv(csv_path)
-    system_prompt = load_labeled_templates(json_path)
+    # system_prompt = load_labeled_templates(json_path)
+    system_prompt = xlsx_to_prompt_by_system(xlsx_path, system_name)
 
     reviewed = []
 
@@ -93,8 +142,10 @@ def process_template_file(csv_path, json_path, output_path):
 
 if __name__ == "__main__":
     # 输入路径
-    csv_path = "BGL_2k.log_templates_with_log.csv" # 用户提供的初始模板
-    json_path = "templates.json"           # 你的人工标注模板
-    output_path = "reviewed_templates.csv" # 输出审查结果
+    system_name = "BGL"                             # 提供系统名称
+    csv_path = "BGL_2k.log_templates_with_log.csv"  # 用户提供的初始模板
+    # json_path = "templates.json"                  # 人工标注模板 .json
+    xlsx_path = "fixed.xlsx"                        # 人工标注模板，包含各个系统 .xlsx
+    output_path = "reviewed_templates_1.csv"        # 输出审查结果
 
-    process_template_file(csv_path, json_path, output_path)
+    process_template_file(system_name, csv_path, xlsx_path, output_path)
