@@ -4,7 +4,7 @@ import openai
 import time
 from openai import OpenAI
 
-api_key = "sk-1ihU4FLfC7zcWZSNq70HGFpJ3iq5t5yMuNQE2lEJVtWGCak3"
+api_key = ""
 host_url = "https://api.chatanywhere.tech/v1"
 client = OpenAI(
     api_key=api_key,
