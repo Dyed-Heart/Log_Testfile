@@ -37,4 +37,6 @@ evaluate.py为评估程序，用来计算GPT输出模板获得的准确率、回
 ---
 * .env ：存放API KEY
 
+* Log.txt ：某次运行的输出文本
+
 * requirement.txt
